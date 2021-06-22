@@ -42,5 +42,46 @@ class Produk extends CI_Controller {
         $this->model_barang->tambah_barang($data, 'tb_barang');
         redirect('admin/produk/index'); 
     }
+
+    public function edit($id)
+    {
+        $where = array('tb_brg' => $id);
+        $data['barang'] = $this->model_barang->edit_barang($where, 'tb_barang')->result();
+        $this->load->view('templates_admin/header');
+        $this->load->view('templates_admin/sidebar');
+        $this->load->view('admin/edit_barang', $data);
+        $this->load->view('templates_admin/footer');
+    }
+
+    public function update(){
+        $tb_brg = $this->input->post('tb_brg');
+        $nama_brg = $this->input->post('nama_brg');
+        $keterangan = $this->input->post('keterangan');
+        $kategori = $this->input->post('kategori');
+        $harga = $this->input->post('harga');
+        $stok = $this->input->post('stok');
+    
+        $data = array(
+            'nama_brg'  => $nama_brg,
+            'keterangan'  => $keterangan,
+            'kategori'  => $kategori,
+            'harga'  => $harga,
+            'stok'  => $stok,
+        );
+
+        $where = array(
+            'tb_brg' => $tb_brg
+        );
+
+        $this->model_barang->update_data($where,$data, 'tb_barang');
+        redirect('admin/produk/index');
+    }
+
+    public function hapus($id)
+    {
+        $where = array('tb_brg' => $id);
+        $this->model_barang->hapus_data($where, 'tb_barang');
+        redirect('admin/produk/index');
+    }
 }
 ?>

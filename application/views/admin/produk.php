@@ -22,8 +22,8 @@
             <td><?php echo $brg->harga?></td>
             <td><?php echo $brg->stok?></td>
             <td><div class="btn btn-success btn-sm"><i class="fas fa-search-plus"></i></div></td>
-            <td><div class="btn btn-primary btn-sm"><i class="fa fa-edit"></i></div></td>
-            <td><div class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></div></td>
+            <td><?php echo anchor('admin/produk/edit/' .$brg->tb_brg, '<div class="btn btn-primary btn-sm"><i class="fa fa-edit"></i></div>')?></td>
+            <td><?php echo anchor('admin/produk/hapus/' .$brg->tb_brg, '<div class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></div>')?></td>
         </tr>
         <?php endforeach; ?>
     </table>
@@ -40,7 +40,7 @@
         </button>
       </div>
       <div class="modal-body">
-        <form action="<?php echo base_url(). 'admin/produk/tambah_aksi';?>" method="post" enctype="multipart/form-data">
+        <form action="<?php echo base_url(). 'index.php/admin/produk/tambah_aksi';?>" method="post" enctype="multipart/form-data">
             <div class="form-group">
                 <label>Nama Barang</label>
                 <input type="text" name="nama_brg" class="form-control">
