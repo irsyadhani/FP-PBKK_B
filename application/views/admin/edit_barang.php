@@ -3,7 +3,7 @@
 
 	<?php foreach($barang as $brg) : ?>
 		
-		<form method="post" action="<?php echo base_url().'admin/produk/update' ?>">
+		<form method="post" action="<?php echo base_url().'index.php/admin/produk/update' ?>">
 			<div class="for-group">
 				<label>Nama Barang</label>
 				<input type="text" name="nama_brg" class="form-control" value="<?php echo $brg->nama_brg?>">
