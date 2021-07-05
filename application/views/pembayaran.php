@@ -41,7 +41,7 @@
 				<div class="form-group">
 					<label>Pilih Bank</label>
 					<select class="form-control">
-						<option>Bank - XXXXXXX</option>
+						<option>BCA - XXXXXXX</option>
 						<option>BNI - XXXXXX</option>
 						<option>BRI - XXXXXX</option>
 						<option>MANDIRI - XXXXXX</option>

@@ -19,14 +19,27 @@
 
             <!-- Nav Item - Dashboard -->
             <li class="nav-item active">
-                <a class="nav-link" href="<?php echo base_url('admin/dashboard_admin')?>">
+                <a class="nav-link" href="<?php echo base_url('index.php/admin/dashboard_admin')?>">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Dashboard</span></a>
             </li>
 
+
+            <li class="nav-item">
+                <a class="nav-link" href="<?php echo base_url('index.php/admin/produk')?>">
+                    <i class="fas fa-cart-arrow-down"></i>
+                    <span>Produk</span></a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="<?php echo base_url('index.php/admin/invoice')?>">
+                    <i class="fas fa-receipt"></i>
+                    <span>Invoice</span></a>
+            </li>
+
             <!-- Nav Item - Tables -->
             <li class="nav-item">
-                <a class="nav-link" href="<?php echo base_url('admin/pengiriman')?>">
+                <a class="nav-link" href="<?php echo base_url('index.php/admin/pengiriman')?>">
                     <i class="fas fa-shipping-fast"></i>
                     <span>Pengiriman</span></a>
             </li>
@@ -35,12 +48,6 @@
                 <a class="nav-link" href="<?php echo base_url('admin/pesanan')?>">
                     <i class="fas fa-dolly"></i>
                     <span>Pesanan</span></a>
-            </li>
-
-            <li class="nav-item">
-                <a class="nav-link" href="<?php echo base_url('admin/produk')?>">
-                    <i class="fas fa-cart-arrow-down"></i>
-                    <span>Produk</span></a>
             </li>
 
             <li class="nav-item">
