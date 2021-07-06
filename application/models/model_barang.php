@@ -37,4 +37,15 @@ class Model_barang extends CI_Model{
             return array();
         }
     }
+
+    public function detail_brg($tb_brg)
+    {
+        $result = $this->db->where('tb_brg', $tb_brg)->get('tb_barang');
+
+        if($result->num_rows() > 0){
+            return $result->result();
+        }else{
+            return false();
+        }
+    }
 }

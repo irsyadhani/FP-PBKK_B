@@ -30,7 +30,7 @@
 
     <div class="row text-center mt-4">
 
-        <?php foreach ($barang as $brg) : ?>
+        <?php foreach ($router as $brg) : ?>
 
             <div class="card ml-4 mb-3" style="width: 14rem;">
                 <img src="<?php echo base_url().'/image/'.$brg->gambar ?>" class="card-img-top" alt="...">
